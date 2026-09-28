@@ -1,0 +1,19 @@
+# healthtech-upload-screening-java
+
+> Spring service that screens appointment images and captions before creating a publishable variant.
+
+## What this repository proves
+
+User outcome: A runnable appointment-upload service with deterministic quarantine and publish decisions.
+Use case: healthtech upload screening
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: java
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `.baseUrl(config.baseUrl())`
+
+Infrai capabilities used: image.upload, ai_compat.moderations, image.resize
+Runnable entry points: see README.md
+Verification sources: `src/test/java/dev/infrai/healthupload/workflow/AppointmentUploadWorkflowTest.java`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt

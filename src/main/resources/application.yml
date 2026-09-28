@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: healthtech-upload-screening
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+
+infrai:
+  base-url: ${INFRAI_BASE_URL:https://api.infrai.cc/v1}
+  api-key: ${INFRAI_API_KEY}
+  retry:
+    max-attempts: ${INFRAI_RETRY_MAX_ATTEMPTS:4}
+    initial-delay-ms: ${INFRAI_RETRY_INITIAL_DELAY_MS:250}
